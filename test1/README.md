@@ -54,7 +54,7 @@ end fork
 
 **业务流程图如下：**
 
-![flow1](flow1.png)
+![flow1](test1.png)
 
 **流程说明：**
 
@@ -105,7 +105,7 @@ stop
 
 **业务流程图如下：**
 
-![flow2](flow2.png)
+![flow2](test2.png)
 
 **流程说明：**
 
