@@ -12,6 +12,7 @@
 |totalNum|int| |否|0| |库存|
 |restNum|int| |否|0| |可借阅量|
 |shortcontent|int| |是|0| |简介内容|
+|publishingtime|datetime| |是|0| |出版时间|
 
 ## 1.2. Administrator表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
@@ -54,15 +55,15 @@
 
 ## 2. 界面设计
 ## 2.1. 图书查询界面设计
-![pic1](pic.png)
+![pic1](pic.PNG)
 - 用例图参见：图书查询用例
 - 类图参见：Book类，Reader类，LendRecord类
 - 顺序图参见：图书查询顺序图
 - API接口如下：
 
-1. 查询图书API
+1. 查询到的图书API
 
-- 功能：用于用户查询图书
+- 功能：用于获取某用户查询图书
 - 请求地址： http://localhost/v1/api/get_books
 - 请求方法：POST
 - 请求参数：
@@ -74,15 +75,27 @@
 - 返回实例：
 ```
 {
-	"find": {
+	"find": [{
 		"ISBN": "9787513501231",
 		"bookname": "岛",
-		"publisher": "XXX",
-		"price": "28",
-		"totalNum": "3",
+		"publisher": "杨氏出版社",
 		"rest": "3",
-		"shortcontent": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        "publishingtime":2015-11-22
 	},
+	{
+    		"ISBN": "9787513501221",
+    		"bookname": "穿越森林的男孩",
+    		"publisher": "杨氏出版社",
+    		"rest": "0",
+            "publishingtime":2015-11-22
+    	},
+    	{
+          		"ISBN": "9787513501231",
+          		"bookname": "线",
+          		"publisher": "杨氏出版社",
+          		"rest": "4",
+                  "publishingtime":2015-11-22
+          	}],
 	"status": "1"
 }
 
