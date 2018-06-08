@@ -53,17 +53,10 @@ Teacher --> (选课)<br>
 }
 @enduml
 ### 4.类图：
-![Alt text](https://raw.githubusercontent.com/312922143/is_analysis/master/test6/My1.png)
+![Alt text](https://raw.githubusercontent.com/312922143/is_analysis/master/test6/My13.png)
 <br>
 源码：<br>
 @startuml<br>
-class University{<br>
-id  学校的Id值<br>
-name  学校名字<br>
-location  学习所在地址<br>
-level  学校等级<br>
-}<br>
-
 class Academy{<br>
  id  学院ID值<br>
  name 学院名字<br>
@@ -78,14 +71,7 @@ password  密码MD5加密<br>
 role  角色分类<br>
 value  是否可用<br>
 }<br>
-class Class{<br>
-id 班级的Id值<br>
-size 该班学生总数<br>
-academyId  学院Id值<br>
-headTeacherNo 班主任ID<br>
-grade  年级<br>
-classId  班级数<br>
-}<br>
+
 class Student {<br>
 id  学生信息主键<br>
 studentNo  学号<br>
